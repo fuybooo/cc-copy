@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+/* 第三方样式引入 */
+@import "../node_modules/font-awesome/css/font-awesome.min.css";
+@import "../node_modules/animate.css/animate.min.css";
+@import '../node_modules/ztree/css/metroStyle/metroStyle.css';
+@import '../node_modules/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css';
+@import '../node_modules/imageviewer/dist/viewer.min.css';
+/* 第三方bootstrap样式引入 */
+/* bootstrap */
+@import "./assets/scss/base/bootstrap-variables.scss";
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+// 公共样式
+@import "./assets/scss/base/app-base.scss";
+// 第三方样式重写
+@import "./assets/scss/base/bootstrap.scss";
+
+// 各模块的样式
+@import "./assets/scss/login/login.scss";
+

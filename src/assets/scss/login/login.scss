@@ -1,0 +1,32 @@
+.login-wrap {
+  width: 100vw;
+  height: 100vh;
+  & > .login-container {
+    padding-top: 11%;
+    & > .login-box {
+      width: 410px;
+      padding: 20px;
+      box-shadow: $app-box-shadow;
+      border: 0;
+      background: $app-color-white;
+      .login-header {
+        img {
+          &:hover {
+            transition: all .5s  ease-in-out;
+            transform: rotateY(-360deg);
+          }
+        }
+      }
+      hr {
+        width: 100%;
+        color: $app-color-black-secondary;
+      }
+      input, button {
+        padding: 10px;
+      }
+      .copy-right {
+          color: $app-color-black-secondary;
+      }
+    }
+  }
+}

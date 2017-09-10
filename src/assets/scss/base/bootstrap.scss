@@ -1,0 +1,130 @@
+//=================bootstrap================
+//btn
+.btn {
+	-webkit-box-shadow: $app-btn-shadow;
+	box-shadow: $app-btn-shadow;
+	-moz-box-shadow: $app-btn-shadow;
+	text-transform: uppercase;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	transition: all 0.4s;
+}
+
+.btn-secondary {
+	-webkit-background-size: 200% 200%;
+	background-size: 200% 200%;
+	background-position: 50%;
+}
+
+.btn-secondary:active {
+	background-color: $app-bootstrap-secondary-deep;
+	border-color: $app-bootstrap-secondary-deep;
+	background-image: -webkit-radial-gradient(circle, $app-bootstrap-secondary-deep 10%, $app-bootstrap-secondary 11%);
+	background-image: -o-radial-gradient(circle, $app-bootstrap-secondary-deep 10%, $app-bootstrap-secondary 11%);
+	background-image: radial-gradient(circle, $app-bootstrap-secondary-deep 10%, $app-bootstrap-secondary 11%);
+	background-repeat: no-repeat;
+	-webkit-background-size: 1000% 1000%;
+	background-size: 1000% 1000%;
+}
+
+.btn-primary {
+	-webkit-background-size: 200% 200%;
+	background-size: 200% 200%;
+	background-position: 50%;
+}
+
+.btn-primary:active {
+	background-color: $app-bootstrap-primary-deep;
+	border-color: $app-bootstrap-primary-deep;
+	background-image: -webkit-radial-gradient(circle, $app-bootstrap-primary-deep 10%, $app-bootstrap-primary 11%);
+	background-image: -o-radial-gradient(circle, $app-bootstrap-primary-deep 10%, $app-bootstrap-primary 11%);
+	background-image: radial-gradient(circle, $app-bootstrap-primary-deep 10%, $app-bootstrap-primary 11%);
+	background-repeat: no-repeat;
+	-webkit-background-size: 1000% 1000%;
+	background-size: 1000% 1000%;
+}
+
+.btn-success {
+	-webkit-background-size: 200% 200%;
+	background-size: 200% 200%;
+	background-position: 50%;
+}
+
+.btn-success:active {
+	background-color: $app-bootstrap-success-deep;
+	border-color: $app-bootstrap-success-deep;
+	background-image: -webkit-radial-gradient(circle, $app-bootstrap-success-deep 10%, $app-bootstrap-success 11%);
+	background-image: -o-radial-gradient(circle, $app-bootstrap-success-deep 10%, $app-bootstrap-success 11%);
+	background-image: radial-gradient(circle, $app-bootstrap-success-deep 10%, $app-bootstrap-success 11%);
+	background-repeat: no-repeat;
+	-webkit-background-size: 1000% 1000%;
+	background-size: 1000% 1000%;
+}
+
+.btn-info {
+	-webkit-background-size: 200% 200%;
+	background-size: 200% 200%;
+	background-position: 50%;
+}
+
+.btn-info:active {
+	background-color: $app-bootstrap-info-deep;
+	border-color: $app-bootstrap-info-deep;
+	background-image: -webkit-radial-gradient(circle, $app-bootstrap-info-deep 10%, $app-bootstrap-info 11%);
+	background-image: -o-radial-gradient(circle, $app-bootstrap-info-deep 10%, $app-bootstrap-info 11%);
+	background-image: radial-gradient(circle, $app-bootstrap-info-deep 10%, $app-bootstrap-info 11%);
+	background-repeat: no-repeat;
+	-webkit-background-size: 1000% 1000%;
+	background-size: 1000% 1000%;
+}
+
+.btn-warning {
+	-webkit-background-size: 200% 200%;
+	background-size: 200% 200%;
+	background-position: 50%;
+}
+
+.btn-warning:active {
+	background-color: $app-bootstrap-warning-deep;
+	border-color: $app-bootstrap-warning-deep;
+	background-image: -webkit-radial-gradient(circle, $app-bootstrap-warning-deep 10%, $app-bootstrap-warning 11%);
+	background-image: -o-radial-gradient(circle, $app-bootstrap-warning-deep 10%, $app-bootstrap-warning 11%);
+	background-image: radial-gradient(circle, $app-bootstrap-warning-deep 10%, $app-bootstrap-warning 11%);
+	background-repeat: no-repeat;
+	-webkit-background-size: 1000% 1000%;
+	background-size: 1000% 1000%;
+}
+
+.btn-danger {
+	-webkit-background-size: 200% 200%;
+	background-size: 200% 200%;
+	background-position: 50%;
+}
+
+.btn-danger:active {
+	background-color: $app-bootstrap-danger-deep;
+	border-color: $app-bootstrap-danger-deep;
+	background-image: -webkit-radial-gradient(circle, $app-bootstrap-danger-deep 10%, $app-bootstrap-danger 11%);
+	background-image: -o-radial-gradient(circle, $app-bootstrap-danger-deep 10%, $app-bootstrap-danger 11%);
+	background-image: radial-gradient(circle, $app-bootstrap-danger-deep  10%, $app-bootstrap-danger 11%);
+	background-repeat: no-repeat;
+	-webkit-background-size: 1000% 1000%;
+	background-size: 1000% 1000%;
+}
+
+.table> thead>tr> th {
+	border-bottom: 0px;
+	padding: 5px;
+	line-height: 30px;
+}
+
+.table> tbody>tr> td {
+	padding: 5px;
+	line-height: 30px;
+}
+
+//=================ng-bootstrap================
+//datepicker
+.ngb-dp-header {
+	background-color: $app-color-gray-primary;
+}
