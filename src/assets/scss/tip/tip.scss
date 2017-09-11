@@ -1,0 +1,17 @@
+.tip-box-wrap {
+  width: 450px;
+  position: absolute;
+  margin-top: 10px;
+  z-index: 20000;
+  .tip-wrap {
+    border: 0;
+    box-shadow: $app-tip-box;
+    border-radius: 20px;
+  }
+}
+.tip-top-center {
+  top: 0;
+  left: -moz-calc(50% - 450px / 2);
+  left: -webkit-calc(50% - 450px / 2);
+  left: calc(50% - 450px / 2);
+}

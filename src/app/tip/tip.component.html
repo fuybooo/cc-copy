@@ -1,3 +1,7 @@
-<p>
-  tip works!
-</p>
+<div class="alert text-white tip-wrap" [ngClass]="getTipStyle().bg">
+  <button *ngIf="isDismissEnabled()" class="close" data-dismiss="config" aria-label="Close" (click)="dismiss()">
+    <span aria-hidden>&times;</span>
+  </button>
+  <i class="fa" [ngClass]="getTipStyle().fa"></i>
+  <strong>{{config.textStrong}}</strong><span>{{config.text}}</span>
+</div>

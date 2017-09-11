@@ -1,4 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
@@ -8,6 +9,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {SelectivePreloadingStrategy} from "./selective-preloading-strategy";
 import {TipComponent} from './tip/tip.component';
 import {AppService} from "./app.service";
+import {TipService} from "./tip/tip.service";
+import {TipBoxComponent} from "./tip/tip-box.component";
 
 
 @NgModule({
@@ -16,12 +19,14 @@ import {AppService} from "./app.service";
     LoadingComponent,
     PageNotFoundComponent,
     TipComponent,
+    TipBoxComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [SelectivePreloadingStrategy, AppService],
+  providers: [SelectivePreloadingStrategy, AppService, TipService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

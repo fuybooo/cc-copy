@@ -1,0 +1,6 @@
+<!--显示提示信息的容器-->
+<div class="tip-box-wrap" [ngClass]="tipPosition">
+  <div *ngFor="let tipConfig of getTipConfigs()" [@tipAnimation]="tipAnimation">
+    <app-tip [config]="tipConfig" (dismissed)="remove(tipConfig)"></app-tip>
+  </div>
+</div>
