@@ -12,6 +12,7 @@ import {AppService} from "./app.service";
 import {TipService} from "./tip/tip.service";
 import {TipBoxComponent} from "./tip/tip-box.component";
 import {LoadingService} from "./loading/loading.service";
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {LoadingService} from "./loading/loading.service";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule.forRoot()
   ],
   providers: [SelectivePreloadingStrategy, AppService, TipService, LoadingService],
   bootstrap: [AppComponent]

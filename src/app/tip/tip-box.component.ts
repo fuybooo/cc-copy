@@ -52,7 +52,7 @@ export class TipBoxComponent implements OnInit {
 
   remove(tipConfig: TipConfig): void {
     if (this.tipConfigs.includes(tipConfig)) {
-      this.tipConfigs.splice(this.tipConfigs.indexOf(tipConfig));
+      this.tipConfigs.splice(this.tipConfigs.indexOf(tipConfig), 1);
     }
   }
 }

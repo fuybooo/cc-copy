@@ -1,0 +1,140 @@
+/**卡片**/
+.app-card {
+  border: none;
+  border-radius: 1px;
+  box-shadow: $app-box-shadow;
+}
+
+/*line table*/
+.app-line-table {
+  width: 100%;
+  margin-bottom: 10px;
+  tr {
+    border-bottom: 0 dashed $app-color-white-gray;
+    td {
+      padding: 10px;
+    }
+    th {
+      padding: 10px;
+    }
+  }
+  &:first-child {
+    tr {
+      border-top: 0 dashed $app-color-white-gray;
+    }
+  }
+}
+
+/*图片上传按钮*/
+.app-file-upload {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width:100px;
+  [type=file] {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    cursor: pointer;
+  }
+}
+
+/*行标题*/
+.app-line-title {
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  font-size: 15px;
+  border-bottom: 1px dashed $app-color-gray-deep;
+  color: $app-color-black-secondary;
+  font-weight: bold;
+}
+
+/*时间轴*/
+.app-timeline {
+  position: relative;
+  padding: 0;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    height: 100%;
+    width: 2px;
+    background: $app-color-gray-primary;
+  }
+}
+.app-timeline-block {
+  position: relative;
+  margin: 0;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.app-timeline-point {
+  position: absolute;
+  top: 22px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $app-color-gray-primary;
+  &:hover{
+    background-color: $app-color-secondary;
+  }
+}
+.app-timeline-point-active {
+  position: absolute;
+  top: 22px;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: $app-color-secondary;
+}
+.app-timeline-content {
+  position: relative;
+  display: table;
+  clear: both;
+  margin-left: 30px;
+  width: -moz-calc(100% - 35px);
+  width: -webkit-calc(100% - 35px);
+  width: calc(100% - 35px);
+  border-bottom: 1px solid $app-color-gray-deep;
+  padding: 15px;
+  &:hover{
+    background-color: $app-color-gray-primary;
+    cursor: pointer;
+  }
+  .app-title {
+    color: $app-color-black-primary;
+    margin-top: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .app-text {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: $app-color-black-primary;
+  }
+  .app-date {
+    color: $app-color-black-secondary;
+    float: left;
+    padding: 2px 0;
+  }
+}
+
+

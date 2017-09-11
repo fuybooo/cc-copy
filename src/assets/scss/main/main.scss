@@ -1,0 +1,43 @@
+.main-wrapper {
+  width: 100%;
+  height: 100vh;
+  .main-primary-nav {
+    height: 100vh;
+    background-color: $app-color-primary;
+    float: left;
+    display: block;
+    .main-header-profile {
+      width: 235px;
+      height: 125px;
+      margin-top: 20px;
+      text-align: center;
+      img {
+        width: 88px;
+        heigth: 88px;
+        box-shadow: $app-img-shadow;
+        cursor: pointer;
+      }
+    }
+    .main-header {
+      height: 59px;
+      line-height: 59px;
+      text-align: center;
+      background-color: $app-color-secondary;
+      border-bottom: 1px solid $app-color-secondary;
+      & > img {
+        vertical-align: -6px;
+        border-radius: 50%;
+        box-shadow: $app-box-shadow;
+        background-color: $app-color-deep;
+        &:hover {
+          transition: all .5s ease-in-out;
+          transform: rotateY(-360deg);
+        }
+      }
+      h3 {
+        display: inline-block;
+        color: $app-color-gray-secondary;
+      }
+    }
+  }
+}

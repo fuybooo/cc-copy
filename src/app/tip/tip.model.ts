@@ -8,8 +8,8 @@ export enum TipType {
 
 export class TipConfig {
   constructor(private tipType: TipType,
-              private textStrong: string = '',
-              private text: string = '',
+              public textStrong: string = '',
+              public text: string = '',
               private autoDismissTime: number = 0,
               private dismissable: boolean = true) {
   }

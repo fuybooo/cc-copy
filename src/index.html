@@ -34,7 +34,7 @@
         transform: rotate(1turn);
       }
     }
-    .loading-container {
+    .index-loading-container {
       position: fixed;
       top: 0;
       left: 0;
@@ -45,7 +45,7 @@
       display: none;
     }
 
-    .loading-container .loading-container-1 {
+    .index-loading-container .index-loading-container-1 {
       display: block;
       position: relative;
       left: calc(50% + 15px);
@@ -60,7 +60,7 @@
       animation: loading 2s linear infinite
     }
 
-    .loading-container .loading-container-2 {
+    .index-loading-container .index-loading-container-2 {
       content: "";
       position: absolute;
       top: 5px;
@@ -74,7 +74,7 @@
       animation: loading 3s linear infinite
     }
 
-    .loading-container .loading-container-3 {
+    .index-loading-container .index-loading-container-3 {
       content: "";
       position: absolute;
       top: 15px;
@@ -89,15 +89,15 @@
   </style>
 </head>
 <body>
-<div class="loading-container" id="loading-container">
-  <div class="loading-container-1">
-    <div class="loading-container-2"></div>
-    <div class="loading-container-3"></div>
+<div class="index-loading-container" id="index-loading-container">
+  <div class="index-loading-container-1">
+    <div class="index-loading-container-2"></div>
+    <div class="index-loading-container-3"></div>
   </div>
 </div>
 <script>
   (function () {
-    const loading = document.getElementById('loading-container');
+    const loading = document.getElementById('index-loading-container');
     loading.style.display = 'block';
     document.onreadystatechange = function () {
       (document.readyState === 'complete') && (loading.style.display = 'none');

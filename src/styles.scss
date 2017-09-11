@@ -13,6 +13,7 @@
 @import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
 // 公共样式
 @import "./assets/scss/base/app-base.scss";
+@import "./assets/scss/base/common.scss";
 // 第三方样式重写
 @import "./assets/scss/base/bootstrap.scss";
 
@@ -21,4 +22,5 @@
 @import "./assets/scss/login/login.scss";
 @import "./assets/scss/tip/tip.scss";
 @import "./assets/scss/loading/loading.scss";
+@import "./assets/scss/main/main.scss";
 

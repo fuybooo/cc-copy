@@ -1,6 +1,11 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {TipConfig, TipType} from "./tip.model";
 
+interface TipStyle {
+  bg?: string;
+  fa?: string;
+}
+
 @Component({
   selector: 'app-tip',
   templateUrl: './tip.component.html'
@@ -17,9 +22,10 @@ export class TipComponent implements OnInit {
       setTimeout(() => this.dismiss(), this.config.getAutoDismissTime());
     }
   }
-  getTipStyle(): string {
-    let tipStyle: any = {};
-    switch (this.config.getTipType()) {
+  getTipStyle(): TipStyle {
+    let tipStyle: TipStyle = {};
+    const tipType = this.config.getTipType();
+    switch (tipType) {
       case TipType.SUCCESS:
         tipStyle = {
           bg: 'bg-success',
@@ -54,3 +60,4 @@ export class TipComponent implements OnInit {
     this.dismissed.emit();
   }
 }
+
