@@ -1,0 +1,57 @@
+.loading-backdrop {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 300000;
+  background-color: $app-color-black-deep;
+  filter: alpha(opacify=2);
+  opacity: .02;
+}
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 300001;
+  .loading-container-1 {
+    display: block;
+    position: relative;
+    left: calc(50% + 15px);
+    top: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 6px solid transparent;
+    border-top-color: $app-loading-color-red;
+    transform: translateZ(0);
+    animation: loading 2s linear infinite;
+    .loading-container-2 {
+      content: '';
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      bottom: 5px;
+      left: 5px;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      border-top-color: $app-loading-color-blue;
+      animation: loading 3s linear infinite;
+    }
+    .loading-container-3 {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      border-radius: 50%;
+      border: 6px solid transparent;
+      border-top-color: $app-loading-color-yellow;
+      animation: loading 1.5s linear infinite;
+    }
+  }
+}

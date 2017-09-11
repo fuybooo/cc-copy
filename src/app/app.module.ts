@@ -11,6 +11,7 @@ import {TipComponent} from './tip/tip.component';
 import {AppService} from "./app.service";
 import {TipService} from "./tip/tip.service";
 import {TipBoxComponent} from "./tip/tip-box.component";
+import {LoadingService} from "./loading/loading.service";
 
 
 @NgModule({
@@ -26,7 +27,7 @@ import {TipBoxComponent} from "./tip/tip-box.component";
     BrowserAnimationsModule,
     AppRoutingModule
   ],
-  providers: [SelectivePreloadingStrategy, AppService, TipService],
+  providers: [SelectivePreloadingStrategy, AppService, TipService, LoadingService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
