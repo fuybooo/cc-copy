@@ -1,5 +1,5 @@
 <div class="main-wrapper">
-  <div class="main-primary-nav">
+  <div class="main-primary-nav" [ngClass]="{'nav-close': navClose, 'nav-open': !navClose}">
     <div class="main-header">
       <img src="assets/img/favicon.ico" alt="Logo">
       <h3>管理系统</h3>
@@ -7,7 +7,7 @@
     <div class="main-header-profile">
       <img class="rounded-circle" [src]="mainData.userData.userAvatar" alt="头像">
       <div ngbDropdown>
-          <span ngbDropdownToggle>{{mainData.userData.username}}</span>
+          <span ngbDropdownToggle class="main-header-profile-username">{{mainData.userData.username}}</span>
           <div ngbDropdownMenu class="dropdown-menu animated fadeIn">
             <button class="dropdown-item" (click)="userInfo()">
               <i class="fa fa-user-circle-o fa-fw"></i>个人资料
@@ -21,6 +21,7 @@
           </div>
       </div>
     </div>
+    <app-main-nav [data]="mainData.menuData"></app-main-nav>
   </div>
 </div>
 <router-outlet></router-outlet>

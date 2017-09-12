@@ -15,7 +15,7 @@ export class MenuData {
   name: string;
   keyword: string;
   icon: string;
-  isExpend: boolean;
+  isExpend?: boolean;
   url?: string;
   children?: Array<MenuData>;
 }

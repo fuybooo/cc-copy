@@ -7,6 +7,7 @@ import {MainData} from "./main.model";
 })
 export class MainComponent implements OnInit {
 
+  navClose = false;
   mainData: MainData = {
     userData: {
       username: 'Fuybooo',
@@ -22,7 +23,113 @@ export class MainComponent implements OnInit {
         name: '示例',
         keyword: 'demo',
         icon: 'fa-wrench',
-        isExpend: false
+        isExpend: false,
+        children: [
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+          {
+            id: '2',
+            parentId: '1',
+            name: '消息框',
+            keyword: '',
+            icon: '',
+            url: ''
+          },
+        ]
       }
     ]
   };
