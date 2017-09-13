@@ -7,6 +7,7 @@ import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {MainNavComponent} from "./main-nav.component";
 import {MainTreeViewComponent} from "./main-tree-view.component";
 import {SharedModule} from "../shared/shared.module";
+import {PinyinService} from "../shared/util/pinyin.service";
 @NgModule({
   imports: [
     MainRoutingModule,
@@ -19,6 +20,9 @@ import {SharedModule} from "../shared/shared.module";
     MainComponent,
     MainNavComponent,
     MainTreeViewComponent
+  ],
+  providers: [
+    PinyinService
   ]
 })
 export class MainModule {

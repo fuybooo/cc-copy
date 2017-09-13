@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {MenuData} from "./main.model";
+import {PinyinService} from "../shared/util/pinyin.service";
 declare let $: any;
 
 @Component({
@@ -12,7 +13,7 @@ export class MainNavComponent implements OnInit {
   searchMsgHidden = true;
   private originData: Array<MenuData> = [];
 
-  constructor() {
+  constructor(private pinyinService: PinyinService) {
   }
 
   ngOnInit() {
@@ -20,8 +21,50 @@ export class MainNavComponent implements OnInit {
     this.originData = $.extend(true, [], this.data);
   }
 
+  // 根据输入的值查询菜单数据
   searchMenu() {
-    // 根据输入的值查询菜单数据
+    if (this.searchText.trim() === '') {
+      return;
+    }
+    let resultMenu: Array<MenuData> = [];
+    let resultMenuIds: Array<string> = [];
+    for (let item of this.originData) {
+      this.getResultMenu(item, resultMenu, resultMenuIds);
+    }
+    this.data = resultMenu.length ? resultMenu : this.data;
+    this.searchMsgHidden = !resultMenu.length;
+  }
+
+  getResultMenu(menuData: MenuData, menuList: Array<MenuData>, menuIds: Array<string>) {
+    // 将符合条件的并且不再list中的菜单加入到list中去
+    if (menuData.name.indexOf(this.searchText) !== -1 && !this.checkMenuIn(menuData, menuIds)) {
+      menuList.push(menuData);
+      this.getResultMenuIds(menuData, menuIds);
+    } else {
+      let children = menuData.children;
+      if (children && children.length) {
+        for (let sub of children) {
+          this.getResultMenu(sub, menuList, menuIds);
+        }
+      }
+    }
+  }
+  getResultMenuIds(menuData: MenuData, menuIds: Array<string>) {
+    menuIds.push(menuData.id);
+    let children = menuData.children;
+    if (children && children.length) {
+      for (let sub of children) {
+        this.getResultMenuIds(sub, menuIds);
+      }
+    }
+  }
+  checkMenuIn(menuData: MenuData, menuIds: Array<string>): boolean {
+    for (let id in menuIds) {
+      if (menuData.id === id) {
+        return true;
+      }
+    }
+    return false;
   }
 
   itemClicked(item: MenuData) {
