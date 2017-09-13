@@ -1,6 +1,6 @@
 <div class="main-nav-search">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="搜索菜单..." [(ngModel)]="searchText">
+    <input type="text" class="form-control" placeholder="搜索菜单..." [(ngModel)]="searchText" (keyup.enter)="searchMenu()">
     <span class="input-group-btn">
       <button class="btn btn-info main-not-shadow" type="button" (click)="searchMenu()">
         <i class="fa fa-search fa-fw"></i>
@@ -8,15 +8,17 @@
       </span>
   </div>
 </div>
-<div class="main-nav" main-custom-scrollbar>
+<div class="main-nav" appCustomScrollbar>
   <span class="main-search-msg" [hidden]="searchMsgHidden">搜索的菜单不存在...</span>
   <ul class="main-nav-menu" [hidden]="!searchMsgHidden">
+    <!--一级菜单-->
     <li *ngFor="let item of data">
       <a (click)="itemClicked(item)">
         <i class="fa pull-right"
            [ngClass]="{'fa-angle-down': !isLeaf(item) && item.isExpend, 'fa-angle-left': !isLeaf(item) && !item.isExpend}"></i>
         <i class="fa" [ngClass]="item.icon"></i> <span>{{item.name}}</span>
       </a>
+      <!--一级菜单下的子菜单-->
       <app-main-tree-view [data]="item"></app-main-tree-view>
     </li>
   </ul>

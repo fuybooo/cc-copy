@@ -5,14 +5,9 @@ import {MenuData} from "./main.model";
   templateUrl: './main-tree-view.component.html'
 })
 export class MainTreeViewComponent implements OnInit {
-  @Input() data: Array<MenuData>;
-  searchText = '';
-  searchMsgHidden = true;
+  @Input() data: MenuData;
   constructor() {}
   ngOnInit() {
-  }
-  searchMenu() {
-    alert('search');
   }
   itemClicked(item: MenuData) {
     if (!this.isLeaf(item)) {

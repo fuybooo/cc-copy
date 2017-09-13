@@ -6,9 +6,11 @@ import {MainComponent} from "./main.component";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {MainNavComponent} from "./main-nav.component";
 import {MainTreeViewComponent} from "./main-tree-view.component";
+import {SharedModule} from "../shared/shared.module";
 @NgModule({
   imports: [
     MainRoutingModule,
+    SharedModule,
     CommonModule,
     FormsModule,
     NgbModule

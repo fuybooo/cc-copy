@@ -61,6 +61,7 @@ $nav-font-size: 15px;
         }
       }
     }
+    // 搜索框
     .main-nav-search {
       padding: 10px 13px 15px;
       input {
@@ -99,7 +100,7 @@ $nav-font-size: 15px;
         }
       }
     }
-    // 系统名称 60 + 搜索 60 + 个人简介 125 + margin-top 20 = 265
+    // 导航菜单 系统名称 60 + 搜索 60 + 个人简介 125 + margin-top 20 = 265
     .main-nav {
       margin-left: 0;
       height: calc(100vh - 265px);
