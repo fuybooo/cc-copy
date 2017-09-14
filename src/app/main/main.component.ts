@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MainData} from "./main.model";
 
 @Component({
@@ -287,16 +287,21 @@ export class MainComponent implements OnInit {
       }
     ]
   };
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
+
   userInfo() {
     alert(1);
   }
+
   editPassword() {
     alert(2);
   }
+
   logout() {
     alert(3);
   }

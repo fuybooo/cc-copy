@@ -20,10 +20,18 @@ export class MainNavComponent implements OnInit {
     // 利用jquery对对象（数组）进行深拷贝，但是感觉这种做法很不typescript
     this.originData = $.extend(true, [], this.data);
   }
-
+  private checkMenuIn(menuData: MenuData, menuIds: Array<string>): boolean {
+    for (let id in menuIds) {
+      if (menuData.id === id) {
+        return true;
+      }
+    }
+    return false;
+  }
   // 根据输入的值查询菜单数据
   searchMenu() {
     if (this.searchText.trim() === '') {
+      this.data = $.extend(true, [], this.originData);
       return;
     }
     let resultMenu: Array<MenuData> = [];
@@ -32,12 +40,14 @@ export class MainNavComponent implements OnInit {
       this.getResultMenu(item, resultMenu, resultMenuIds);
     }
     this.data = resultMenu.length ? resultMenu : this.data;
-    this.searchMsgHidden = !resultMenu.length;
+    this.searchMsgHidden = !!resultMenu.length;
   }
 
-  getResultMenu(menuData: MenuData, menuList: Array<MenuData>, menuIds: Array<string>) {
+  private getResultMenu(menuData: MenuData, menuList: Array<MenuData>, menuIds: Array<string>) {
     // 将符合条件的并且不再list中的菜单加入到list中去
-    if (menuData.name.indexOf(this.searchText) !== -1 && !this.checkMenuIn(menuData, menuIds)) {
+    if ((menuData.name.indexOf(this.searchText.toLowerCase()) !== -1 ||
+          this.checkPinyin(menuData.name)
+        ) && !this.checkMenuIn(menuData, menuIds)) {
       menuList.push(menuData);
       this.getResultMenuIds(menuData, menuIds);
     } else {
@@ -49,7 +59,16 @@ export class MainNavComponent implements OnInit {
       }
     }
   }
-  getResultMenuIds(menuData: MenuData, menuIds: Array<string>) {
+  private checkPinyin(name: string): boolean {
+    let isMatch = false;
+    for (let item of this.pinyinService.getPy(name)) {
+      if (item.indexOf(this.searchText.toUpperCase()) !== -1) {
+        isMatch = true;
+      }
+    }
+    return isMatch;
+  }
+  private getResultMenuIds(menuData: MenuData, menuIds: Array<string>) {
     menuIds.push(menuData.id);
     let children = menuData.children;
     if (children && children.length) {
@@ -57,14 +76,6 @@ export class MainNavComponent implements OnInit {
         this.getResultMenuIds(sub, menuIds);
       }
     }
-  }
-  checkMenuIn(menuData: MenuData, menuIds: Array<string>): boolean {
-    for (let id in menuIds) {
-      if (menuData.id === id) {
-        return true;
-      }
-    }
-    return false;
   }
 
   itemClicked(item: MenuData) {

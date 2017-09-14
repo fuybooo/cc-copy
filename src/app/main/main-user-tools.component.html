@@ -1,0 +1,15 @@
+<img class="rounded-circle" [src]="mainData.userData.userAvatar" alt="头像">
+<div ngbDropdown>
+  <span ngbDropdownToggle class="main-header-profile-username">{{userName}}</span>
+  <div ngbDropdownMenu class="dropdown-menu animated fadeIn">
+    <button class="dropdown-item" (click)="userInfo()">
+      <i class="fa fa-user-circle-o fa-fw"></i>个人资料
+    </button>
+    <button class="dropdown-item" (click)="editPassword()">
+      <i class="fa fa-key fa-fw"></i>修改密码
+    </button>
+    <button class="dropdown-item" (click)="logout()">
+      <i class="fa fa-sign-out fa-fw"></i>退出系统
+    </button>
+  </div>
+</div>
