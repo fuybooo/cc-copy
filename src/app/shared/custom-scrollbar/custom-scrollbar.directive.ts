@@ -3,7 +3,7 @@ declare let $: any;
 @Directive({
   selector: '[appCustomScrollbar]'
 })
-export class CustomScrollbarDirective implements AfterViewInit, OnDestroy{
+export class CustomScrollbarDirective implements AfterViewInit, OnDestroy {
   // 默认的配置
   @Input() options: any = {
     axis: 'y',

@@ -5,21 +5,26 @@
       <h3>管理系统</h3>
     </div>
     <div class="main-header-profile">
-      <app-main-user-tools [userName]="mainData.userData.username"></app-main-user-tools>
+      <app-main-user-tools [username]="mainData.userData.username" [src]="mainData.userData.userAvatar"></app-main-user-tools>
     </div>
     <app-main-nav [data]="mainData.menuData"></app-main-nav>
   </div>
-  <div class="main-content-wrap">
-    <div class="main-header">
-      <div>
-        <button></button>
-        <span class="main-title"></span>
+  <div class="main-content-wrap" [ngClass]="{'content-close': !navClose, 'content-open': navClose}">
+    <div class="main-content-header">
+      <div class="main-title-box">
+        <button class="btn btn-secondary btn-xs" (click)="toggleNav()" placement="right" [ngbTooltip]="toggleDescTip">
+          <i class="fa fa-dedent fa-fw" [hidden]="navClose"></i>
+          <i class="fa fa-indent fa-fw" [hidden]="!navClose"></i>
+        </button>
+        <h3>{{title}}</h3>
       </div>
       <div class="main-tools">
         <ul class="nav nav-pills pull-right">
-          <li class="main-tools-item"></li>
-          <li>
-            <app-main-user-tools [userName]="mainData.userData.username"></app-main-user-tools>
+          <li class="main-tools-item" (click)="toHome()">
+            <i class="fa fa-home fa-fw"></i>首页
+          </li>
+          <li class="main-tools-user">
+            <app-main-user-tools [username]="mainData.userData.username" [src]="mainData.userData.userAvatar"></app-main-user-tools>
           </li>
         </ul>
       </div>

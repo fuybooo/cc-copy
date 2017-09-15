@@ -43,7 +43,7 @@ $nav-font-size: 15px;
         box-shadow: $app-img-shadow;
         cursor: pointer;
       }
-      .main-header-profile-username {
+      .main-username {
         color: $app-color-gray-primary;
         font-size: $nav-font-size;
         font-weight: bold;
@@ -158,13 +158,97 @@ $nav-font-size: 15px;
       }
     }
   }
+}
 
-  .main-primary-nav.nav-close {
-    width: 0;
-    display: none;
+.main-primary-nav.nav-close {
+  width: 0;
+  display: none;
+}
+.main-primary-nav.nav-open {
+  width: $nav-width;
+}
+.main-content-wrap {
+  height: 100vh;
+  background-color: $app-color-white-gray;
+  .main-content-header {
+    background-color: $app-color-white;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: $app-header-shadow;
+    border-bottom: 1px solid $app-color-gray-deep;
+    .main-title-box {
+      padding-left: 15px;
+      float: left;
+      button {
+        padding: 5px 6px;
+        border-radius: 1px;
+      }
+      h3 {
+        font-size: 1.2em;
+        font-weight: bold;
+        color: $app-color-black-primary;
+        margin-left: 8px;
+        display: inline-flex;
+        vertical-align: -1px;
+      }
+    }
+    .main-tools {
+      position: inherit;
+      padding-right: 50px;
+      .nav-pills {
+        .main-tools-item {
+          padding-left: 15px;
+          padding-right: 15px;
+          font-size: $nav-font-size;
+          transition: .35s;
+          float: left;
+          cursor: pointer;
+          &:hover {
+            background-color: $app-color-white-gray;
+          }
+        }
+        .main-tools-user {
+          padding-right: 6px;
+          padding-left: 16px;
+          margin-left: 10px;
+          width: 150px;
+          cursor: pointer;
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            margin-top: -3px;
+            box-shadow: $app-img-shadow;
+            cursor: pointer;
+          }
+          .main-user-tools-wrap {
+            display: inline-block;
+            .main-username {
+              color: $app-color-black-primary;
+              font-size: $nav-font-size;
+              font-weight: bold;
+              cursor: pointer;
+            }
+            .dropdown-menu {
+              .dropdown-item {
+                line-height: 30px;
+                i {
+                  margin-right: 5px;
+                }
+                &:hover {
+                  color: $app-bootstrap-primary-deep;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
-  .main-primary-nav.nav-open {
-    width: $nav-width;
-  }
-
+}
+.main-content-wrap.content-close {
+  margin-left: $nav-width;
+}
+.main-content-wrap.content-open {
+  margin-left: 0;
 }

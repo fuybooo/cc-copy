@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MainData} from "./main.model";
+import {Router} from "@angular/router";
+import {AppService} from "../app.service";
 
 @Component({
   selector: 'app-main',
@@ -287,22 +289,28 @@ export class MainComponent implements OnInit {
       }
     ]
   };
+  toggleDescTip = '点击隐藏菜单';
+  title = '首页';
 
-  constructor() {
+  constructor(private router: Router,
+        private appService: AppService) {
+    this.appService.titleEventEmitter.subscribe(title => title && (this.title = title));
   }
 
   ngOnInit() {
   }
 
-  userInfo() {
-    alert(1);
+  toggleNav() {
+    this.navClose = !this.navClose;
+    if (this.navClose) {
+      this.toggleDescTip = '点击显示菜单';
+    } else {
+      this.toggleDescTip = '点击隐藏菜单';
+    }
   }
 
-  editPassword() {
-    alert(2);
-  }
-
-  logout() {
-    alert(3);
+  toHome() {
+    this.title = '首页';
+    this.router.navigate(['/app/home']);
   }
 }

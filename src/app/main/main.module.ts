@@ -8,6 +8,7 @@ import {MainNavComponent} from "./main-nav.component";
 import {MainTreeViewComponent} from "./main-tree-view.component";
 import {SharedModule} from "../shared/shared.module";
 import {PinyinService} from "../shared/util/pinyin.service";
+import {MainUserToolsComponent} from "./main-user-tools.component";
 @NgModule({
   imports: [
     MainRoutingModule,
@@ -19,7 +20,8 @@ import {PinyinService} from "../shared/util/pinyin.service";
   declarations: [
     MainComponent,
     MainNavComponent,
-    MainTreeViewComponent
+    MainTreeViewComponent,
+    MainUserToolsComponent
   ],
   providers: [
     PinyinService

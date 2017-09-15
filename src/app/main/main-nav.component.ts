@@ -20,7 +20,7 @@ export class MainNavComponent implements OnInit {
     // 利用jquery对对象（数组）进行深拷贝，但是感觉这种做法很不typescript
     this.originData = $.extend(true, [], this.data);
   }
-  private checkMenuIn(menuData: MenuData, menuIds: Array<string>): boolean {
+  checkMenuIn(menuData: MenuData, menuIds: Array<string>): boolean {
     for (let id in menuIds) {
       if (menuData.id === id) {
         return true;

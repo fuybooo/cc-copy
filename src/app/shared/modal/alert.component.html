@@ -1,0 +1,32 @@
+<div>
+  <div class="modal-body">
+    <div>
+      <button aria-label="Close" class="close" (click)="close()">
+        <span aria-hidden>&times;</span>
+      </button>
+    </div>
+    <div class="text-center mt10 mb5">
+      <div class="text-info ml20" [hidden]="!isInfo(config.type)">
+        <span class="fa-stack fa-5x" aria-hidden>
+          <i class="fa fa-circle-o fa-stack-2x"></i>
+          <i class="fa fa-info fa-stack-1x"></i>
+        </span>
+      </div>
+      <div class="text-danger ml20" [hidden]="!isError(config.type)">
+        <span class="fa-stack fa-5x" aria-hidden="true">
+          <i class="fa fa-times-circle-o fa-stack-2x"></i>
+        </span>
+      </div>
+      <div class="text-warning ml20 mb10" [hidden]="!isWarning(config.type)">
+        <span class="fa-stack fa-4x" aria-hidden>
+          <i class="fa-warning fa-stack-2x"></i>
+        </span>
+      </div>
+    </div>
+    <h5 class="text-center" [hidden]="!config.title">{{config.title}}</h5>
+    <div class="text-center word-break modal-content" [innerHTML]="config.content"></div>
+  </div>
+  <div class="text-center mt10 mb20">
+    <button class="btn" [ngClass]="config.approveBtnCls" (click)="approve()">{{config.approveBtnText}}</button>
+  </div>
+</div>
