@@ -318,4 +318,9 @@ a[href], input[type='submit'], input[type='image'], label[for], select, button, 
   width: 100%
 }
 
+.modal-footer {
+  button + button {
+    margin-left: 15px;
+  }
+}
 

@@ -230,6 +230,7 @@ $nav-font-size: 15px;
               cursor: pointer;
             }
             .dropdown-menu {
+              background-color: $app-color-light;
               .dropdown-item {
                 line-height: 30px;
                 i {
