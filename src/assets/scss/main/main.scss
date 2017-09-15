@@ -253,3 +253,13 @@ $nav-font-size: 15px;
 .main-content-wrap.content-open {
   margin-left: 0;
 }
+.main-container {
+  width: 100%;
+  height: calc(100vh - 61px);
+}
+.main-container > .mCustomScrollBox {
+  width: 100%;
+}
+.main-container-inner {
+  height: 100%;
+}

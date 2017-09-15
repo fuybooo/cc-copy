@@ -81,6 +81,11 @@ $app-bootstrap-warning-deep: #bf9608;
 $app-bootstrap-danger: #f86c6b;
 $app-bootstrap-danger-deep: #e23533;
 
+/* 表单验证样式 */
+.form-control.ng-invalid.ng-touched {
+  border-color: $app-bootstrap-danger-deep;
+}
+
 /*页面统一样式*/
 html,
 body {

@@ -10,6 +10,7 @@ import {SharedModule} from "../shared/shared.module";
 import {PinyinService} from "../shared/util/pinyin.service";
 import {MainUserToolsComponent} from "./main-user-tools.component";
 import {EditPasswordComponent} from "../user/edit-password.component";
+import {PasswordValidatorComponent} from "../shared/custom-validators/password-validator.component";
 @NgModule({
   imports: [
     MainRoutingModule,
@@ -25,7 +26,8 @@ import {EditPasswordComponent} from "../user/edit-password.component";
     MainTreeViewComponent,
     MainUserToolsComponent,
 
-    EditPasswordComponent
+    EditPasswordComponent,
+    PasswordValidatorComponent
   ],
   providers: [
     PinyinService
