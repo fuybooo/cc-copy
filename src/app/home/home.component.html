@@ -1,14 +1,15 @@
 <div class="home-content">
   <!--欢迎语-->
-  <div class="row mb15">
+  <div class="row mb15" [hidden]="userTipClose">
     <div class="col-md-12">
       <div class="card app-card">
         <div>
           <i class="fa fa-bullhorn fa-fw text-danger">
-          </i><strong>欢迎您，Fuybooo</strong><span class="home-login-tip">
-          ！这是您第<span class="text-danger">17</span>次登录，上次登录时间为：<span class="text-danger">
-          2017-09-15 10:10:10</span>，如果不是您本人登录，请及时<a href="javascript:void(0)" (click)="editPassword()">修改密码</a>。</span>
-          <button class="close" aria-label="Close">
+          </i><strong class="text-danger">欢迎您，Fuybooo</strong><span class="home-login-tip">
+          ！这是您第<span class="text-danger m05">17</span>次登录，上次登录时间为：<span class="text-danger m05">
+          2017-09-15 10:10:10</span>，如果不是您本人登录，请及时
+          <a href="javascript:void(0)" (click)="editPassword()">修改密码</a>。</span>
+          <button class="close" aria-label="Close" (click)="userTipClose = true">
             <span aria-hidden>&times;</span>
           </button>
         </div>
@@ -18,14 +19,188 @@
 
   <div class="row">
     <div class="col-md-6">
-      <!--TODO home-->
-      home
-      <div style="height: 1000px"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card app-card home-card">
+            <div>
+              <div class="row">
+                <div class="col-md-9">
+                  <h5 class="card-title fs15"><i class="fa fa-bell-o fa-fw"></i>待办信息</h5>
+                </div>
+                <div class="col-md-3 text-right">
+                  <a (click)="isTodoCollapsed = !isTodoCollapsed"><i class="fa fa-minus"></i></a>
+                </div>
+              </div>
+              <div [ngbCollapse]="isTodoCollapsed">
+                <div class="row mt15 home-card-inner scroll-y-a">
+                  <div class="col-md-12">
+                    <table class="app-line-table">
+                      <tr>
+                        <td>
+                          <span class="home-card-tip"><i class="fa fa-info fa-fw"></i>您共有<strong class="text-danger">{{todoObj.total}}</strong>条未处理待办信息</span>
+                        </td>
+                        <td class="text-right">
+                          <a class="text-danger">查看更多>></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="app-line-table table-hover">
+                      <tbody>
+                      <tr class="cursor-pointer" *ngFor="let todo of todoObj.todoList;let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>
+                          <span class="badge badge-success mr5">{{todo.submitUser}}</span><span>{{todo.title}}</span>
+                        </td>
+                        <td class="text-right text-date">
+                          {{todo.createDate}}
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt10">
+        <div class="col-md-12">
+          <div class="card app-card home-card">
+            <div>
+              <div class="row">
+                <div class="col-md-9">
+                  <h5 class="card-title fs15"><i class="fa fa-bell-o fa-fw"></i>待办信息</h5>
+                </div>
+                <div class="col-md-3 text-right">
+                  <a (click)="isTodoCollapsed = !isTodoCollapsed"><i class="fa fa-minus"></i></a>
+                </div>
+              </div>
+              <div [ngbCollapse]="isTodoCollapsed">
+                <div class="row mt15 home-card-inner scroll-y-a">
+                  <div class="col-md-12">
+                    <table class="app-line-table">
+                      <tr>
+                        <td>
+                          <span class="home-card-tip"><i class="fa fa-info fa-fw"></i>您共有<strong class="text-danger">{{todoObj.total}}</strong>条未处理待办信息</span>
+                        </td>
+                        <td class="text-right">
+                          <a class="text-danger">查看更多>></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="app-line-table table-hover">
+                      <tbody>
+                      <tr class="cursor-pointer" *ngFor="let todo of todoObj.todoList;let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>
+                          <span class="badge badge-success mr5">{{todo.submitUser}}</span><span>{{todo.title}}</span>
+                        </td>
+                        <td class="text-right text-date">
+                          {{todo.createDate}}
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="col-md-6">
-      <!--TODO home-->
-      home
-      <div style="height: 1000px"></div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card app-card home-card">
+            <div>
+              <div class="row">
+                <div class="col-md-9">
+                  <h5 class="card-title fs15"><i class="fa fa-bell-o fa-fw"></i>待办信息</h5>
+                </div>
+                <div class="col-md-3 text-right">
+                  <a (click)="isTodoCollapsed = !isTodoCollapsed"><i class="fa fa-minus"></i></a>
+                </div>
+              </div>
+              <div [ngbCollapse]="isTodoCollapsed">
+                <div class="row mt15 home-card-inner scroll-y-a">
+                  <div class="col-md-12">
+                    <table class="app-line-table">
+                      <tr>
+                        <td>
+                          <span class="home-card-tip"><i class="fa fa-info fa-fw"></i>您共有<strong class="text-danger">{{todoObj.total}}</strong>条未处理待办信息</span>
+                        </td>
+                        <td class="text-right">
+                          <a class="text-danger">查看更多>></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="app-line-table table-hover">
+                      <tbody>
+                      <tr class="cursor-pointer" *ngFor="let todo of todoObj.todoList;let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>
+                          <span class="badge badge-success mr5">{{todo.submitUser}}</span><span>{{todo.title}}</span>
+                        </td>
+                        <td class="text-right text-date">
+                          {{todo.createDate}}
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt10">
+        <div class="col-md-12">
+          <div class="card app-card home-card">
+            <div>
+              <div class="row">
+                <div class="col-md-9">
+                  <h5 class="card-title fs15"><i class="fa fa-bell-o fa-fw"></i>待办信息</h5>
+                </div>
+                <div class="col-md-3 text-right">
+                  <a (click)="isTodoCollapsed = !isTodoCollapsed"><i class="fa fa-minus"></i></a>
+                </div>
+              </div>
+              <div [ngbCollapse]="isTodoCollapsed">
+                <div class="row mt15 home-card-inner scroll-y-a">
+                  <div class="col-md-12">
+                    <table class="app-line-table">
+                      <tr>
+                        <td>
+                          <span class="home-card-tip"><i class="fa fa-info fa-fw"></i>您共有<strong class="text-danger">{{todoObj.total}}</strong>条未处理待办信息</span>
+                        </td>
+                        <td class="text-right">
+                          <a class="text-danger">查看更多>></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table class="app-line-table table-hover">
+                      <tbody>
+                      <tr class="cursor-pointer" *ngFor="let todo of todoObj.todoList;let i = index">
+                        <td>{{i + 1}}</td>
+                        <td>
+                          <span class="badge badge-success mr5">{{todo.submitUser}}</span><span>{{todo.title}}</span>
+                        </td>
+                        <td class="text-right text-date">
+                          {{todo.createDate}}
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

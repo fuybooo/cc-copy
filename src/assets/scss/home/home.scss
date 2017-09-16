@@ -3,3 +3,15 @@
   height: 100%;
   padding: 15px;
 }
+.home-card {
+  max-height: 335px;
+  .home-card-inner {
+    max-height: 270px;
+    .home-card-tip {
+      color: $app-color-black-secondary;
+    }
+    .text-date {
+      color: $app-color-black-secondary;
+    }
+  }
+}
