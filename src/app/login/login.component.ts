@@ -11,15 +11,14 @@ import {Router} from "@angular/router";
 export class LoginComponent implements OnInit {
 
   constructor(private tipService: TipService,
-              private loadingServaice: LoadingService,
+              private loadingService: LoadingService,
               private router: Router) {
   }
   ngOnInit() {
   }
   login(): void {
-    const tipConfig = new TipConfig(TipType.SUCCESS, '', '点击登录成功', 2000);
-    this.tipService.tip(tipConfig);
-    this.loadingServaice.loading(true);
+    this.tipService.tip(new TipConfig(TipType.SUCCESS, '', '点击登录成功', 2000));
+    this.loadingService.loading(true);
     this.router.navigate(['/app/home']);
   }
 

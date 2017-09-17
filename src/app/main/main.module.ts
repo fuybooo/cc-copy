@@ -9,16 +9,17 @@ import {MainTreeViewComponent} from "./main-tree-view.component";
 import {SharedModule} from "../shared/shared.module";
 import {PinyinService} from "../shared/util/pinyin.service";
 import {MainUserToolsComponent} from "./main-user-tools.component";
-import {EditPasswordComponent} from "../user/edit-password.component";
+import {EditPasswordComponent} from "./edit-password.component";
 import {PasswordValidatorComponent} from "../shared/custom-validators/password-validator.component";
+import {PasswordValidatorDirective} from "../shared/custom-validators/password-validator.directive";
 @NgModule({
   imports: [
-    MainRoutingModule,
-    SharedModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    SharedModule,
+    MainRoutingModule
   ],
   declarations: [
     MainComponent,
@@ -27,7 +28,11 @@ import {PasswordValidatorComponent} from "../shared/custom-validators/password-v
     MainUserToolsComponent,
 
     EditPasswordComponent,
-    PasswordValidatorComponent
+    PasswordValidatorComponent,
+    PasswordValidatorDirective
+  ],
+  entryComponents: [
+    EditPasswordComponent
   ],
   providers: [
     PinyinService

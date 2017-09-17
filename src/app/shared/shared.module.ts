@@ -7,7 +7,7 @@ import {CustomScrollbarDirective} from "./custom-scrollbar/custom-scrollbar.dire
 import {ConfirmComponent} from "./modal/confirm.component";
 import {AlertComponent} from "./modal/alert.component";
 import {ModalService} from "./modal/modal.service";
-import {EditPasswordComponent} from "../user/edit-password.component";
+import {EditPasswordComponent} from "../main/edit-password.component";
 import {PasswordValidatorDirective} from "./custom-validators/password-validator.directive";
 
 @NgModule({
@@ -22,13 +22,13 @@ import {PasswordValidatorDirective} from "./custom-validators/password-validator
     CustomScrollbarDirective,
     ConfirmComponent,
     AlertComponent,
-    PasswordValidatorDirective
+    // PasswordValidatorDirective
   ],
   providers: [ModalService],
   entryComponents: [
     ConfirmComponent,
     AlertComponent,
-    EditPasswordComponent
+    // EditPasswordComponent
   ],
   exports: [
     CustomScrollbarDirective,

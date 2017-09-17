@@ -1,0 +1,16 @@
+.page-not-found-wrap {
+  padding-top: 13%;
+  .page-not-found-content {
+    width: 440px;
+    margin: 0 auto;
+  }
+  .page-not-found-desc {
+    font-size: 16px;
+    color: $app-color-gray-light;
+    margin: 0 auto;
+    opacity: .8;
+    width: 330px;
+    text-align: center;
+    clear: both;
+  }
+}

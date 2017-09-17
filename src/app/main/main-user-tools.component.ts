@@ -3,7 +3,7 @@ import {ModalService} from "../shared/modal/modal.service";
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {ConfirmConfig, ModalStatus} from "../shared/modal/modal.model";
 import {Router} from "@angular/router";
-import {EditPasswordComponent} from "../user/edit-password.component";
+import {EditPasswordComponent} from "./edit-password.component";
 
 @Component({
   selector: 'app-main-user-tools',

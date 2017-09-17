@@ -39,9 +39,9 @@ export class MainComponent implements OnInit {
             id: '3',
             parentId: '1',
             name: '模态框',
-            keyword: 'model',
+            keyword: 'modal',
             icon: 'fa-columns',
-            url: '/app/demo/modelDemo'
+            url: '/app/demo/modalDemo'
           },
           {
             id: '4',

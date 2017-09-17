@@ -1,0 +1,37 @@
+<div class="p15">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>消息框示例：</h2>
+      <ol>
+        <li>
+          <h4>默认消息框示例：</h4>
+          <div class="btn-group mt10 mb20">
+            <button class="btn btn-success" (click)="tip('success')">成功提示信息</button>
+            <button class="btn btn-info" (click)="tip('info')">提示信息</button>
+            <button class="btn btn-warning" (click)="tip('warning')">警告提示信息</button>
+            <button class="btn btn-danger" (click)="tip('error')">错误提示信息</button>
+          </div>
+        </li>
+        <li>
+          <h4>自定义内容消息框示例：</h4>
+          <div class="btn-group mt10 mb20">
+            <button class="btn btn-success" (click)="tip('success', 2)">成功提示信息</button>
+            <button class="btn btn-info" (click)="tip('info', 2)">提示信息</button>
+            <button class="btn btn-warning" (click)="tip('warning', 2)">警告提示信息</button>
+            <button class="btn btn-danger" (click)="tip('error', 2)">错误提示信息</button>
+          </div>
+        </li>
+        <li>
+          <h4>自定义配置消息框示例：</h4>
+          <div class="btn-group mt10 mb20">
+            <button class="btn btn-success" (click)="tip('success', 3)">成功提示信息</button>
+            <button class="btn btn-info" (click)="tip('info', 3)">提示信息</button>
+            <button class="btn btn-warning" (click)="tip('warning', 3)">警告提示信息</button>
+            <button class="btn btn-danger" (click)="tip('error', 3)">错误提示信息</button>
+          </div>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+</div>
