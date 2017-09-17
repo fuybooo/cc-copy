@@ -1,1 +1,39 @@
-<p>modal demo works</p>
+<div class="p15">
+  <h5>弹出模态框提示（默认信息）：</h5>
+  <div class="mt10 mb20">
+    <div class="app-btn-group">
+      <button class="btn btn-info" (click)="modal(1)">提示信息模态框</button>
+      <button class="btn btn-warning" (click)="modal(2)">警告信息模态框</button>
+      <button class="btn btn-danger" (click)="modal(3)">错误信息模态框</button>
+      <button class="btn btn-primary" (click)="modal(4)">确认信息模态框</button>
+    </div>
+  </div>
+  <h5>弹出模态框提示（自定义提示信息）：</h5>
+  <div class="mt10 mb20">
+    <div class="app-btn-group">
+      <button class="btn btn-info" (click)="modal(5)">提示信息模态框</button>
+      <button class="btn btn-warning" (click)="modal(6)">警告信息模态框</button>
+      <button class="btn btn-danger" (click)="modal(7)">错误信息模态框</button>
+      <button class="btn btn-primary" (click)="modal(8)">确认信息模态框</button>
+    </div>
+  </div>
+  <h5>弹出模态框提示（带回调方法）：</h5>
+  <div class="mt10 mb20">
+    <div class="app-btn-group">
+      <button class="btn btn-info" (click)="modal(9)">提示信息模态框</button>
+      <button class="btn btn-primary" (click)="modal(10)">确认信息模态框</button>
+    </div>
+  </div>
+  <h5>弹出自定义模态框</h5>
+  <div class="mt10 mb20">
+    <div class="app-btn-group">
+      <button class="btn btn-primary" (click)="modal(11)">自定义模态框</button>
+    </div>
+  </div>
+  <h5>弹出自定义模态框（通过公共组件弹出）</h5>
+  <div class="mt10 mb20">
+    <div class="app-btn-group">
+      <button class="btn btn-primary" (click)="modal(12)">自定义公共组件模态框</button>
+    </div>
+  </div>
+</div>

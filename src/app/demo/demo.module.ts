@@ -14,6 +14,9 @@ import {DemoRoutingModule} from "./demo-routing.module";
 import {DemoComponent} from "./demo.component";
 import {TipDemoComponent} from "./tip-demo.component";
 import {ModalDemoComponent} from "./modal-demo.component";
+import {CustomModalComponent} from "./custom-modal.component";
+import {CommonModalComponent} from "../shared/common/common-modal.component";
+import {DemoCustomModalComponent} from "./demo-custom-modal.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -33,7 +36,14 @@ import {ModalDemoComponent} from "./modal-demo.component";
   declarations: [
     DemoComponent,
     TipDemoComponent,
-    ModalDemoComponent
+    ModalDemoComponent,
+    CustomModalComponent,
+    CommonModalComponent,
+    DemoCustomModalComponent
+  ],
+  entryComponents: [
+    CustomModalComponent,
+    CommonModalComponent
   ],
   exports: [],
   providers: []

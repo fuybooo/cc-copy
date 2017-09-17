@@ -2,12 +2,12 @@
   <div class="modal-body">
     <div>
       <button aria-label="Close" class="close" (click)="close()">
-        <span aria-hidden>&times;</span>
+        <span aria-hidden="true">&times;</span>
       </button>
     </div>
     <div class="text-center mt10 mb5">
       <div class="text-info ml20" [hidden]="!isInfo(config.type)">
-        <span class="fa-stack fa-5x" aria-hidden>
+        <span class="fa-stack fa-5x" aria-hidden="true">
           <i class="fa fa-circle-o fa-stack-2x"></i>
           <i class="fa fa-info fa-stack-1x"></i>
         </span>
@@ -18,8 +18,8 @@
         </span>
       </div>
       <div class="text-warning ml20 mb10" [hidden]="!isWarning(config.type)">
-        <span class="fa-stack fa-4x" aria-hidden>
-          <i class="fa-warning fa-stack-2x"></i>
+        <span class="fa-stack fa-4x" aria-hidden="true">
+          <i class="fa fa-warning fa-stack-2x"></i>
         </span>
       </div>
     </div>

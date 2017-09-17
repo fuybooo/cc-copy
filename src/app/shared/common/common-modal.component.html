@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="modal-header">
+    <h5 class="modal-title">{{modalTitle}}</h5>
+    <button class="close" aria-label="Close" (click)="close()"><span aria-hidden>&times;</span></button>
+  </div>
+  <div class="modal-body">
+    <ng-container *ngIf="componentName == 'demoCustomModal'">
+      <app-demo-custom-modal></app-demo-custom-modal>
+    </ng-container>
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" (click)="ok()">
+          <i class="fa fa-check" aria-hidden></i>{{okBtnText}}
+        </button>
+        <button class="btn btn-secondary" (click)="close()">
+          <i class="fa fa-close" aria-hidden></i>{{closeBtnText}}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
