@@ -3,6 +3,7 @@ import {AppService} from "../../app.service";
 import {ActivatedRoute} from "@angular/router";
 import {Select2OptionData} from "ng2-select2";
 import {FormControl, FormGroup} from "@angular/forms";
+import {SelectData} from "./select-demo.model";
 
 @Component({
   selector: 'app-select-demo',
@@ -45,7 +46,7 @@ export class SelectDemoComponent implements OnInit {
     }
   };
   // 例1,2 end
-  OPTIONS = [
+  OPTIONS: SelectData[] = [
     {label: 'Agrajag', value: '0'},
     {label: 'Mrs Alice Beeblebrox', value: '1'},
     {label: 'The Allitnils', value: '2'},
@@ -187,17 +188,17 @@ export class SelectDemoComponent implements OnInit {
   ];
   // 例3 start
   @ViewChild('studentSelectComponent') studentSelectComponent;
-  students: any;
+  students: string;
   studentForm: FormGroup;
-  studentsOptions: any[];
+  studentsOptions: SelectData[];
   studentsMultiple = false;
   studentsAllowClear = true;
   // 例3 end
   // 例4 start
-  teachers: any;
+  teachers: string[] = ['2', '3'];
   @ViewChild('teacherSelectComponent') teacherSelectComponent;
   teacherForm: FormGroup;
-  teachersOptions: any[];
+  teachersOptions: SelectData[];
   teachersMultiple = true;
   teachersAllowClear = true;
   // 例4 end
@@ -210,10 +211,10 @@ export class SelectDemoComponent implements OnInit {
     // 设置main中的标题
     this.appService.emitTitle(this.route);
     this.studentForm = new FormGroup({
-      studentSelect: new FormControl('1')
+      studentSelect: new FormControl(this.students || '')
     });
     this.teacherForm = new FormGroup({
-      teacherSelect: new FormControl('1')
+      teacherSelect: new FormControl(this.teachers.length ? this.teachers : '')
     });
   }
   // 例3 start
@@ -223,11 +224,13 @@ export class SelectDemoComponent implements OnInit {
   studentsClosed() {
     console.log('student closed');
   }
-  studentsSelected(event: any) {
+  studentsSelected(event: SelectData) {
     console.log('student selected：', event);
+    this.students = event.value;
   }
-  studentsDeselected(event: any) {
+  studentsDeselected(event: SelectData) {
     console.log('student deselected：', event);
+    this.students = '';
   }
   // 例3 end
   // 例4 start
@@ -237,17 +240,25 @@ export class SelectDemoComponent implements OnInit {
   teachersClosed() {
     console.log('teacher closed');
   }
-  teachersSelected(event: any) {
+  teachersSelected(event: SelectData) {
     console.log('teacher selected：', event);
+    this.teachers.push(event.value);
   }
-  teachersDeselected(event: any) {
+  teachersDeselected(event: SelectData) {
     console.log('teacher deselected：', event);
+    this.teachers.splice(this.teachers.indexOf(event.value), 1);
   }
   // 例4 end
   getSelected(type) {
     switch (type) {
       case 1:
-        console.log('该组件已经被淘汰了！')
+        console.log('该组件已经被淘汰了！');
+        break;
+      case 2:
+        console.log(this.students);
+        break;
+      case 3:
+        console.log(this.teachers);
         break;
     }
   }

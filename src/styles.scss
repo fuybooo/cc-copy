@@ -11,6 +11,8 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import '../node_modules/bootstrap/scss/bootstrap-grid.scss';
 @import '../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+
+@import "./app/vendor/bootstrap-table/src/bootstrap-table.css";
 // 公共样式
 @import "./assets/scss/base/app-base.scss";
 @import "./assets/scss/base/common.scss";

@@ -62,10 +62,10 @@ export class MainComponent implements OnInit {
           {
             id: '6',
             parentId: '1',
-            name: '层次图',
-            keyword: 'hierarchyView',
+            name: '表格',
+            keyword: 'grid',
             icon: 'fa-css3',
-            url: '/app/demo/hierarchyViewDemo'
+            url: '/app/demo/gridDemo'
           },
           {
             id: '7',
