@@ -4,6 +4,7 @@ import {DemoComponent} from "./demo.component";
 import {TipDemoComponent} from "./tip-demo/tip-demo.component";
 import {ModalDemoComponent} from "./modal-demo/modal-demo.component";
 import {ChartDemoComponent} from "./chart-demo/chart-demo.component";
+import {SelectDemoComponent} from "./select-demo/select-demo.component";
 /**
  * demo模块的路由
  * 参数_t为该路由的标题，此方案主要是为了保证该路由的标题与原始数据保持绝对的一致，而不用在子组件中重新定一个标题名称
@@ -16,7 +17,8 @@ const demoRoutes: Routes = [
     children: [
       {path: 'tipDemo/:_t', component: TipDemoComponent},
       {path: 'modalDemo/:_t', component: ModalDemoComponent},
-      {path: 'ngxChartDemo/:_t', component: ChartDemoComponent},
+      {path: 'chartDemo/:_t', component: ChartDemoComponent},
+      {path: 'selectDemo/:_t', component: SelectDemoComponent},
     ]
   }
 ];

@@ -49,7 +49,7 @@ export class MainComponent implements OnInit {
             name: '图表',
             keyword: 'chart',
             icon: 'fa-pie-chart',
-            url: '/app/demo/ngxChartDemo'
+            url: '/app/demo/chartDemo'
           },
           {
             id: '5',

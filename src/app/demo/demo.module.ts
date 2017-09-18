@@ -18,6 +18,7 @@ import {CustomModalComponent} from "./modal-demo/custom-modal.component";
 import {CommonModalComponent} from "../shared/common/common-modal.component";
 import {DemoCustomModalComponent} from "./modal-demo/demo-custom-modal.component";
 import {ChartDemoComponent} from "./chart-demo/chart-demo.component";
+import {SelectDemoComponent} from "./select-demo/select-demo.component";
 
 /**
  * demo模块
@@ -50,7 +51,8 @@ import {ChartDemoComponent} from "./chart-demo/chart-demo.component";
     CustomModalComponent,
     CommonModalComponent,
     DemoCustomModalComponent,
-    ChartDemoComponent
+    ChartDemoComponent,
+    SelectDemoComponent
   ],
   entryComponents: [
     CustomModalComponent,

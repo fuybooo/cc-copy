@@ -1,1 +1,11 @@
-<p>chart demo works</p>
+<ngx-charts-pie-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [results]="single"
+  [legend]="showLegend"
+  [explodeSlices]="explodeSlices"
+  [labels]="showLabels"
+  [doughnut]="doughnut"
+  (select)="onSelect($event)">
+</ngx-charts-pie-chart>
+<p class="cb">更多示例参考官方文档：https://swimlane.gitbooks.io/ngx-charts/content/</p>

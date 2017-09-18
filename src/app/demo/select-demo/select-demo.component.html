@@ -1,0 +1,76 @@
+<div class="p15">
+  <div class="row">
+    <div class="col-md-12">
+      <h5>下拉框示例：</h5>
+      <ol>
+        <li>
+          <h5>使用select2组件：</h5>
+          <div class="row mb20">
+            <div class="col-md-6">
+              <select2 [data]="exampleData" [options]="options" name="s1"></select2>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-primary" (click)="getSelected(1)">取出选中的值</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h5>使用select2组件（有默认值）：</h5>
+          <div class="row mb20">
+            <div class="col-md-6">
+              <select2 [data]="exampleData" [value]="['3', '1']" [options]="options"></select2>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h5>使用ng-select组件：</h5>
+          <div class="row mb20">
+            <div class="col-md-6">
+              <form [formGroup]="studentForm">
+                <ng-select
+                  #studentSelectComponent
+                  formControlName="studentSelect"
+                  placeholder="select a student"
+                  [options]="studentsOptions"
+                  [multiple]="studentsMultiple"
+                  [allowClear]="studentsAllowClear"
+                  (opened)="studentsOpened()"
+                  (closed)="studentsClosed()"
+                  (selected)="studentsSelected($event)"
+                  (deselected)="studentsDeselected($event)"
+                ></ng-select>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-primary" (click)="getSelected(2)">取出选中的值</button>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h5>使用ng-select组件（多选）：</h5>
+          <div class="row mb20">
+            <div class="col-md-6">
+              <form [formGroup]="teacherForm">
+                <ng-select
+                  #teacherSelectComponent
+                  formControlName="teacherSelect"
+                  placeholder="select a teacher"
+                  [options]="teachersOptions"
+                  [multiple]="teachersMultiple"
+                  [allowClear]="teachersAllowClear"
+                  (opened)="teachersOpened()"
+                  (closed)="teachersClosed()"
+                  (selected)="teachersSelected($event)"
+                  (deselected)="teachersDeselected($event)"
+                ></ng-select>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <button class="btn btn-primary" (click)="getSelected(3)">取出选中的值</button>
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>

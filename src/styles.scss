@@ -16,6 +16,7 @@
 @import "./assets/scss/base/common.scss";
 // 第三方样式重写
 @import "./assets/scss/base/bootstrap.scss";
+@import "./assets/scss/base/select2-bootstrap.scss";
 
 // 如果使用组件中的样式，则会导致找不到在app-base.scss中定义的变量，需要再次导入app-base.scss
 // 各模块的样式
