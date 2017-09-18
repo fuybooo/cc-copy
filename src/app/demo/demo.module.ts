@@ -12,11 +12,21 @@ import {Select2Module} from "ng2-select2";
 import {FileUploadModule} from "ng2-file-upload";
 import {DemoRoutingModule} from "./demo-routing.module";
 import {DemoComponent} from "./demo.component";
-import {TipDemoComponent} from "./tip-demo.component";
-import {ModalDemoComponent} from "./modal-demo.component";
-import {CustomModalComponent} from "./custom-modal.component";
+import {TipDemoComponent} from "./tip-demo/tip-demo.component";
+import {ModalDemoComponent} from "./modal-demo/modal-demo.component";
+import {CustomModalComponent} from "./modal-demo/custom-modal.component";
 import {CommonModalComponent} from "../shared/common/common-modal.component";
-import {DemoCustomModalComponent} from "./demo-custom-modal.component";
+import {DemoCustomModalComponent} from "./modal-demo/demo-custom-modal.component";
+import {ChartDemoComponent} from "./chart-demo/chart-demo.component";
+
+/**
+ * demo模块
+ * 创建一个demo的步骤
+ * 1.新建xxx.component.html
+ * 2.新建xxx.component.ts 编写组件代码
+ * 3.在demo.module.ts的declarations中加上XxxComponent
+ * 4.在demo-routing.module.ts中加上该路由
+ */
 @NgModule({
   imports: [
     CommonModule,
@@ -39,7 +49,8 @@ import {DemoCustomModalComponent} from "./demo-custom-modal.component";
     ModalDemoComponent,
     CustomModalComponent,
     CommonModalComponent,
-    DemoCustomModalComponent
+    DemoCustomModalComponent,
+    ChartDemoComponent
   ],
   entryComponents: [
     CustomModalComponent,

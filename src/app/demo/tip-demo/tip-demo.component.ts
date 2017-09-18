@@ -1,8 +1,12 @@
 import {Component, OnInit} from "@angular/core";
-import {AppService} from "../app.service";
-import {TipService} from "../tip/tip.service";
+import {AppService} from "../../app.service";
+import {TipService} from "../../tip/tip.service";
 import {ActivatedRoute} from "@angular/router";
-import {TipConfig, TipType} from "../tip/tip.model";
+import {TipConfig, TipType} from "../../tip/tip.model";
+
+/**
+ * 提示框demo
+ */
 @Component({
   selector: 'app-tip-demo',
   templateUrl: './tip-demo.component.html'

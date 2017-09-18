@@ -1,6 +1,10 @@
 import {Component} from "@angular/core";
 import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
-import {ModalStatus} from "../shared/modal/modal.model";
+import {ModalStatus} from "../../shared/modal/modal.model";
+
+/**
+ * 自定义弹出层组件，按钮，title等所有元素都重写。
+ */
 @Component({
   selector: 'app-custom-modal',
   templateUrl: './custom-modal.component.html'

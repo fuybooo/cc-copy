@@ -1,11 +1,14 @@
 import {Component, OnInit} from "@angular/core";
-import {AppService} from "../app.service";
+import {AppService} from "../../app.service";
 import {ActivatedRoute} from "@angular/router";
-import {ModalService} from "../shared/modal/modal.service";
-import {AlertConfig, AlertType, ModalStatus} from "../shared/modal/modal.model";
+import {ModalService} from "../../shared/modal/modal.service";
+import {AlertConfig, AlertType, ModalStatus} from "../../shared/modal/modal.model";
 import {CustomModalComponent} from "./custom-modal.component";
 import {NgbModal, NgbModalRef} from "@ng-bootstrap/ng-bootstrap";
-import {CommonModalComponent} from "../shared/common/common-modal.component";
+import {CommonModalComponent} from "../../shared/common/common-modal.component";
+/**
+ * 模态框demo
+ */
 @Component({
   selector: 'app-modal-demo',
   templateUrl: './modal-demo.component.html'

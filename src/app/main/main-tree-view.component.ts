@@ -16,7 +16,7 @@ export class MainTreeViewComponent implements OnInit {
       item.isExpend = !item.isExpend;
     } else {
       // todo 如何做到在跳转页面后将MainComponent中的title变为item的name
-      // this.appService.titleEventEmitter.emit(item.name);
+      // this.appService.titleEventEmitter.emit(item.name); // 此方法在刷新页面时会丢失标题
       this.router.navigate([item.url, item.name]);
     }
   }
