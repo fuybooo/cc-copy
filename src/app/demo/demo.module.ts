@@ -20,6 +20,7 @@ import {DemoCustomModalComponent} from "./modal-demo/demo-custom-modal.component
 import {ChartDemoComponent} from "./chart-demo/chart-demo.component";
 import {SelectDemoComponent} from "./select-demo/select-demo.component";
 import {GridDemoComponent} from "./grid-demo/grid-demo.component";
+import {AgGridModule} from "ag-grid-angular";
 
 /**
  * demo模块
@@ -43,7 +44,8 @@ import {GridDemoComponent} from "./grid-demo/grid-demo.component";
     SelectModule,
     Select2Module,
     FileUploadModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    AgGridModule.withComponents([GridDemoComponent])
   ],
   declarations: [
     DemoComponent,
