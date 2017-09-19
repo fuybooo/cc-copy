@@ -32,7 +32,7 @@ export class MainComponent implements OnInit {
             parentId: '1',
             name: '消息框',
             keyword: 'message',
-            icon: 'fa-columns',
+            icon: 'fa-window-minimize',
             url: '/app/demo/tipDemo'
           },
           {
@@ -40,7 +40,7 @@ export class MainComponent implements OnInit {
             parentId: '1',
             name: '模态框',
             keyword: 'modal',
-            icon: 'fa-columns',
+            icon: 'fa-window-restore',
             url: '/app/demo/modalDemo'
           },
           {
@@ -56,7 +56,7 @@ export class MainComponent implements OnInit {
             parentId: '1',
             name: '下拉框',
             keyword: 'select',
-            icon: 'fa-circle',
+            icon: 'fa-caret-square-o-down',
             url: '/app/demo/selectDemo'
           },
           {
@@ -64,114 +64,9 @@ export class MainComponent implements OnInit {
             parentId: '1',
             name: '表格',
             keyword: 'grid',
-            icon: 'fa-css3',
+            icon: 'fa-table',
             url: '/app/demo/gridDemo'
-          },
-          {
-            id: '7',
-            parentId: '1',
-            name: '图片裁剪',
-            keyword: 'imgCropper',
-            icon: 'fa-file-picture-o',
-            url: '/app/demo/imgCropperDemo'
-          },
-          {
-            id: '8',
-            parentId: '1',
-            name: '分页',
-            keyword: 'pagination',
-            icon: 'fa-pagelines',
-            url: '/app/demo/paginationDemo'
-          },
-          {
-            id: '9',
-            parentId: '1',
-            name: 'http分页',
-            keyword: 'httpPagination',
-            icon: 'fa-pagelines',
-            url: '/app/demo/httpPaginationDemo'
-          },
-          {
-            id: '10',
-            parentId: '1',
-            name: '开关按钮',
-            keyword: 'switch',
-            icon: 'fa-toggle-on',
-            url: '/app/demo/switchDemo'
-          },
-          {
-            id: '11',
-            parentId: '1',
-            name: '时间轴样式',
-            keyword: 'timeline',
-            icon: 'fa-clock-o',
-            url: '/app/demo/timelineDemo'
-          },
-          {
-            id: '12',
-            parentId: '1',
-            name: '日期选择',
-            keyword: 'datePicker',
-            icon: 'fa-calendar',
-            url: '/app/demo/datePickerDemo'
-          },
-          {
-            id: '13',
-            parentId: '1',
-            name: '树与下拉树',
-            keyword: 'tree',
-            icon: 'fa-tree',
-            url: '/app/demo/treeDemo'
-          },
-          {
-            id: '14',
-            parentId: '1',
-            name: 'ztree',
-            keyword: 'ztree',
-            icon: 'fa-tree',
-            url: '/app/demo/ztreeDemo'
-          },
-          {
-            id: '15',
-            parentId: '1',
-            name: '图片转base64',
-            keyword: 'imgSelectToBase64',
-            icon: 'fa-upload',
-            url: '/app/demo/imgSelectToBase64Demo'
-          },
-          {
-            id: '16',
-            parentId: '1',
-            name: '文件上传',
-            keyword: 'fileUpload',
-            icon: 'fa-upload',
-            url: '/app/demo/fileUploadDemo'
-          },
-          {
-            id: '17',
-            parentId: '1',
-            name: '模拟滚动条',
-            keyword: 'customScrollbar',
-            icon: 'fa-sliders',
-            url: '/app/demo/customScrollbarDemo'
-          },
-          {
-            id: '18',
-            parentId: '1',
-            name: '图片查看器',
-            keyword: 'imageViewerDemo',
-            icon: 'fa-image',
-            url: '/app/demo/imageViewerDemo'
-          },
-          {
-            id: '19',
-            parentId: '1',
-            name: 'Loading',
-            keyword: 'loading',
-            icon: 'fa-spinner',
-            url: '/app/demo/loadingDemo'
-          },
-        ]
+          }]
       },
       {
         id: '20',
@@ -293,7 +188,7 @@ export class MainComponent implements OnInit {
   title = '首页';
 
   constructor(private router: Router,
-        private appService: AppService) {
+              private appService: AppService) {
     this.appService.titleEventEmitter.subscribe(title => title && (this.title = title));
   }
 

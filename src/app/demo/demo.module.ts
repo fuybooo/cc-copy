@@ -54,7 +54,7 @@ import {GridDemoComponent} from "./grid-demo/grid-demo.component";
     DemoCustomModalComponent,
     ChartDemoComponent,
     SelectDemoComponent,
-    GridDemoComponent
+    GridDemoComponent,
   ],
   entryComponents: [
     CustomModalComponent,
